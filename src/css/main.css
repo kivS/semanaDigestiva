@@ -1,0 +1,188 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; }
+
+
+body {
+	background: #fff;
+	color: #79a8a8;
+	font-weight: 400;
+	font-size: 1.2em;
+	line-height: 1.5;
+	font-family: Arial, Helvetica, sans-serif;
+	overflow-x: hidden;
+}
+
+html, body, .container, .header {
+	height: 100%;
+}
+
+/* Header */
+.header {
+	position: relative;
+	margin: 0 auto;
+	min-height: 560px;
+	width: 100%;
+}
+.bg-img{
+	background-color: #79a8a8;
+	background-image: url(../img/entrada.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center 0px;
+}
+
+.banner{
+	background-image: url(../img/banner.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.banner img{
+	position: absolute;
+	display: block;
+	min-width: 100%;
+	min-height: 100%;
+}
+.title {
+	background-color: #79a8a8;
+	z-index: 1000;
+	margin: 0 auto;
+	padding: 0 1.25em;
+	width: 100%;
+	height:auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.title p {
+	color: #fff;
+	padding: 0 0 0.6em;
+	font-weight: 300;
+	font-size: 0.85em;
+	margin: 0 auto;
+}
+
+h1 {
+	line-height: 1;
+	padding: 0.6em;
+	color: #fff;
+	margin: 0 auto;
+	background-color:#79a8a8;
+	text-align:left;
+	width:13em;
+	margin-left: 1em;
+	font-size: 1.1em;
+}
+p.subline {
+	font-size: 1em;
+	color:#999;
+	line-height: .1em;
+	text-indent: 2.3em;
+}
+a{
+	text-decoration:none;
+	color: #79a8a8;
+}
+a:hover { color: #ccc; }
+
+/* To Navigation Style */
+nav { 
+	padding: 0; 
+	position: relative; 
+	margin:9em 0 0 1.5em; 
+}
+#page-wrap { 
+	position: relative; 
+	margin: 0 0.4em 0 0.4em; 
+}
+ul {list-style: none;}
+/* MENUS Style */
+#menu{
+	height: .5em;
+	min-width: 39em;
+}	
+#menu ul{  
+	padding: 0px;
+	width:16em;
+	display: none;
+	visibility:hidden;
+	position: absolute;
+	top: 40px;
+}
+
+#menu li{
+	
+	display: block;
+	float: left;
+	height: 40px;
+	position: relative;
+}
+#menu li a{
+	text-transform: uppercase;
+	white-space: nowrap;
+	font-size: 0.6em; letter-spacing: 1px;
+	line-height: 40px;
+	height: 40px;
+	display: block;
+	font-weight:bold;
+	padding: 0px 20px 0px 20px;
+}
+#menu ul li {
+	width:16em;
+	height:40px;
+	display: block;
+	visibility:visible;
+}
+#menu ul li a:hover{color: #ccc;}
+
+/* Third-level menus */
+
+#menu ul li a:hover{color: #ccc;}
+
+#menu ul ul{
+	top: 0px;
+	left:16em;
+	display: none;
+	visibility:hidden;
+}
+/* Fourth-level menus */
+#menu ul ul ul{
+	top: 0px;
+	left:16em;
+	display: none;
+	visibility:hidden;
+}
+#menu li:hover > ul{
+	display: block;
+	visibility:visible;
+}
+/* Other Style */
+
+.content .alist li{
+	margin-bottom:2em;
+	list-style: none;
+}
+
+.pesquisa{ float:right; margin-right: 5em; padding: .2em;}
+
+.pesquisa input:focus {
+    outline: none !important;
+    border:1px solid #79a8a8;
+    box-shadow: 0 0 3px #79a8a8;
+}
+
+@media screen and (max-width: 40em) {
+	
+.related {
+		font-size: 80%;
+	}
+}
