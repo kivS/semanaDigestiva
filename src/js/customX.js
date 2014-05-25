@@ -1,0 +1,1 @@
+console.log("CustomX is on and ready to party");
