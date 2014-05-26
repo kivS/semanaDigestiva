@@ -675,6 +675,3 @@ window.projectX = TAFFY(
     }, ]);
 var projectX = window.projectX;
 var areasC = window.areasC;
-console.log(projectX().last());
-console.log("Lucky biatch...and awesome!");
-//alert(city().get());

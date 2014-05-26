@@ -4,33 +4,120 @@ $(document).ready(function(){
 $('#menu li a').click(function(e) {
 	e.preventDefault();
 	var link = $(this).prop('name');
-
+	var pX = "";
+	var cX = 0;
 	switch(link){
 		case 'd5':
-		console.log(projectX({date:5}).get());
+		pX = projectX({date:5,areaC:8}).get();
+		cX = projectX({date:5,areaC:8}).count();
+		$('.content').html(getPageX(pX,cX,"SESSÃO PLENÁRIA - 5 de Junho"));
+
+		pX = projectX({date:5,areaC:5}).get();
+		cX = projectX({date:5,areaC:5}).count();
+		$('.content').append(getPageX(pX,cX,"FÍGADO"));
+
+		pX = projectX({date:5,areaC:3}).get();
+		cX = projectX({date:5,areaC:3}).count();
+		$('.content').append(getPageX(pX,cX,"DOENÇA INFLAMATÓRIA INTESTINAL"));
+
+		pX = projectX({date:5,areaC:6}).get();
+		cX = projectX({date:5,areaC:6}).count();
+		$('.content').append(getPageX(pX,cX,"NSTANTÂNEOS/VÍDEOS"));
+
+		pX = projectX({date:5,areaC:4}).get();
+		cX = projectX({date:5,areaC:4}).count();
+		$('.content').append(getPageX(pX,cX,"ENDOSCOPIA DIGESTIVA"));
 		break;
+
 		case 'd6':
-		console.log(projectX({date:6}).get());
+		pX = projectX({date:6,areaC:3}).get();
+		cX = projectX({date:6,areaC:3}).count();
+		$('.content').html(getPageX(pX,cX,"DOENÇA INFLAMATÓRIA INTESTINAL - 6 de Junho"));
+
+		pX = projectX({date:6,areaC:9}).get();
+		cX = projectX({date:6,areaC:9}).count();
+		$('.content').append(getPageX(pX,cX,"TUBO DIGESTIVO"));
+
+		pX = projectX({date:6,areaC:1}).get();
+		cX = projectX({date:6,areaC:1}).count();
+		$('.content').append(getPageX(pX,cX,"CASOS CLÍNICOS INTERATIVOS"));
+
+		pX = projectX({date:6,areaC:5}).get();
+		cX = projectX({date:6,areaC:5}).count();
+		$('.content').append(getPageX(pX,cX,"FÍGADO"));
+
+		pX = projectX({date:6,areaC:7}).get();
+		cX = projectX({date:6,areaC:7}).count();
+		$('.content').append(getPageX(pX,cX,"PÂNCREAS E VIAS BILIARES"));
+
+		pX = projectX({date:6,areaC:2}).get();
+		cX = projectX({date:6,areaC:2}).count();
+		$('.content').append(getPageX(pX,cX,"CIÊNCIA BÁSICA"));
+
+		pX = projectX({date:6,areaC:4}).get();
+		cX = projectX({date:6,areaC:4}).count();
+		$('.content').append(getPageX(pX,cX,"ENDOSCOPIA DIGESTIVA"));
 		break;
+
 		case 'd7':
-		console.log(projectX({date:7}).get());
+		pX = projectX({date:7,areaC:1}).get();
+		cX = projectX({date:7,areaC:1}).count();
+		$('.content').html(getPageX(pX,cX,"CASOS CLÍNICOS INTERATIVOS - 7 de Junho"));
+
+		pX = projectX({date:7,areaC:9}).get();
+		cX = projectX({date:7,areaC:9}).count();
+		$('.content').append(getPageX(pX,cX,"TUBO DIGESTIVO"));
+
+		pX = projectX({date:7,areaC:6}).get();
+		cX = projectX({date:7,areaC:6}).count();
+		$('.content').append(getPageX(pX,cX,"INSTANTÂNEOS/VÍDEOS"));
+		break;
+
+		case 'tema':
+		pX = projectX({areaC:1}).get();
+		cX = projectX({areaC:1}).count();
+		$('.content').html(getPageX(pX,cX,"CASOS CLÍNICOS INTERATIVOS"));
+
+		pX = projectX({areaC:2}).get();
+		cX = projectX({areaC:2}).count();
+		$('.content').append(getPageX(pX,cX,"CIÊNCIA BÁSICA"));
+
+		pX = projectX({areaC:3}).get();
+		cX = projectX({areaC:3}).count();
+		$('.content').append(getPageX(pX,cX,"DOENÇA INFLAMATÓRIA INTESTINAL"));
+
+		pX = projectX({areaC:4}).get();
+		cX = projectX({areaC:4}).count();
+		$('.content').append(getPageX(pX,cX,"ENDOSCOPIA DIGESTIVA"));
+
+		pX = projectX({areaC:5}).get();
+		cX = projectX({areaC:5}).count();
+		$('.content').append(getPageX(pX,cX,"FÍGADO"));
+
+		pX = projectX({areaC:6}).get();
+		cX = projectX({areaC:6}).count();
+		$('.content').append(getPageX(pX,cX,"INSTANTÂNEOS/VÍDEOS"));
+
+		pX = projectX({areaC:7}).get();
+		cX = projectX({areaC:7}).count();
+		$('.content').append(getPageX(pX,cX,"PÂNCREAS E VIAS BILIARES"));
+
+		pX = projectX({areaC:8}).get();
+		cX = projectX({areaC:8}).count();
+		$('.content').append(getPageX(pX,cX,"SESSÃO PLENÁRIA"));
+
+		pX = projectX({areaC:9}).get();
+		cX = projectX({areaC:9}).count();
+		$('.content').append(getPageX(pX,cX,"TUBO DIGESTIVO"));
 		break;
 	}
-	console.log(link);
-var tst = '';
-tst = '<div><h1>Chocolat Acid</h1><div><ul class="alist">';
-for(var i=1;i<100;i++){
-tst+= '<li><p class="subtitle"><a href="#">'+i+'. Bonbon powder caramels oat cake tiramisu chupa chups lemon drops jujubes.</a></p> \
-                        <p class="subline">Biscuit lemon drops pie topping. Chupa chups sweet roll jelly biscuit jelly beans cotton candy.</li>';
-}
-tst+= '</ul></div></div>';
-	$('.content').html(tst);
+	
+
 
 });         
 //         </Menu-click-Control>
 
 
-console.log("CustomX is on and ready to party");
 
 });
 
