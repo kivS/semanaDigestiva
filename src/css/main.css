@@ -10,12 +10,22 @@ body {
 	font-size: 1.2em;
 	line-height: 1.5;
 	font-family: Arial, Helvetica, sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
 }
 
-html, body, .container, .header {
-	height: 100%;
+a {
+	outline: none;
+	color: #79a8a8;
+	text-decoration: none;
 }
+
+a:hover, a:focus {
+	color: #ccc;
+}
+
+ul{ list-style:none;}
 
 /* Header */
 .header {
@@ -24,33 +34,8 @@ html, body, .container, .header {
 	min-height: 560px;
 	width: 100%;
 }
-.bg-img{
-	background-color: #79a8a8;
-	background-image: url(../img/entrada.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center 0px;
-}
 
-.banner{
-	background-image: url(../img/banner.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: absolute;
-	overflow: hidden;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-.banner img{
-	position: absolute;
-	display: block;
-	min-width: 100%;
-	min-height: 100%;
-}
 .title {
-	background-color: #79a8a8;
 	z-index: 1000;
 	margin: 0 auto;
 	padding: 0 1.25em;
@@ -78,15 +63,11 @@ h1 {
 	margin: 0 auto;
 	background-color:#79a8a8;
 	text-align:left;
-	width:13em;
 	margin-left: 1em;
 	font-size: 1.1em;
 }
-p.subline {
-	font-size: 1em;
+p.subline, subtitle {
 	color:#999;
-	line-height: .1em;
-	text-indent: 2.3em;
 }
 a{
 	text-decoration:none;
@@ -94,22 +75,34 @@ a{
 }
 a:hover { color: #ccc; }
 
-/* To Navigation Style */
+/*--------- To Navigation Style ------------*/
 nav { 
+
 	padding: 0; 
 	position: relative; 
 	margin:9em 0 0 1.5em; 
 }
-#page-wrap { 
-	position: relative; 
-	margin: 0 0.4em 0 0.4em; 
+
+nav a {
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 0.6em;
+	letter-spacing: 1px;
+	padding: 0.3em 0;
+	margin: 0 0.5em;
+	white-space: nowrap;
 }
-ul {list-style: none;}
+
 /* MENUS Style */
 #menu{
 	height: .5em;
-	min-width: 39em;
-}	
+}
+
+a.current-item{
+	color: #79a8a8;
+	background-color: #fff;
+}
+	
 #menu ul{  
 	padding: 0px;
 	width:16em;
@@ -120,11 +113,11 @@ ul {list-style: none;}
 }
 
 #menu li{
-	
 	display: block;
 	float: left;
 	height: 40px;
 	position: relative;
+	margin-bottom: 5px;
 }
 #menu li a{
 	text-transform: uppercase;
@@ -146,7 +139,7 @@ ul {list-style: none;}
 
 /* Third-level menus */
 
-#menu ul li a:hover{color: #ccc;}
+a:hover{color: #ccc;}
 
 #menu ul ul{
 	top: 0px;
@@ -165,6 +158,11 @@ ul {list-style: none;}
 	display: block;
 	visibility:visible;
 }
+
+#menu li ul li a {
+	color:#fff;
+	background-color: #79a8a8;);
+}
 /* Other Style */
 
 .content .alist li{
@@ -172,7 +170,7 @@ ul {list-style: none;}
 	list-style: none;
 }
 
-.pesquisa{ float:right; margin-right: 5em; padding: .2em;}
+.pesquisa{ float:right; margin-right: 3em; padding: 1em .3em;}
 
 .pesquisa input:focus {
     outline: none !important;
