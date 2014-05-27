@@ -118,17 +118,20 @@ $('#menu li a').click(function(e) {
 		$('#searchF').submit(function(e) {
 			e.preventDefault();
 			var sVal = ($('input.bah').val());
-			var sResult1,sResult2;
-			sResult1 = projectX({title:{likenocase:sVal}}).get();
-			sResult2 = projectX({authors:{likenocase:sVal}}).get();
+			var sResult1,sResult2,cR1,cR2;
+			sResult1 = projectX({title:{likenocase:sVal}});
+			cR1 = sResult1.count();
+			sResult1 = sResult1.get();
+			sResult2 = projectX({authors:{likenocase:sVal}});
+			cR2 = sResult2.count();
+			sResult2 = sResult2.get();
 			var searchX = ($.extend(true,sResult1,sResult2));
-			
-			console.log(searchX);
 
+			$('.content').html(getSearchX(searchX,cR1+cR2));
 			$('input.bah').val('');
 		});
    
-// 		</search Form>
+// 		</Search Form>
 
 
 });
