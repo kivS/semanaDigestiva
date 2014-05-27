@@ -111,12 +111,24 @@ $('#menu li a').click(function(e) {
 		$('.content').append(getPageX(pX,cX,"TUBO DIGESTIVO"));
 		break;
 	}
-	
-
-
 });         
 //         </Menu-click-Control>
 
+// 		<Search Form>
+		$('#searchF').submit(function(e) {
+			e.preventDefault();
+			var sVal = ($('input.bah').val());
+			var sResult1,sResult2;
+			sResult1 = projectX({title:{likenocase:sVal}}).get();
+			sResult2 = projectX({authors:{likenocase:sVal}}).get();
+			var searchX = ($.extend(true,sResult1,sResult2));
+			
+			console.log(searchX);
+
+			$('input.bah').val('');
+		});
+   
+// 		</search Form>
 
 
 });
