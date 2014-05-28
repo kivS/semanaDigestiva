@@ -10,7 +10,7 @@ function getPageX(dataX, countX, titleX) {
     var outX = "";
     output = '<div><h1>' + titleX + '</h1><div><ul class="alist">';
     for (var i = 0; i < countX; i++) {
-        outX += '<li><p class="subtitle"><a href="' + dataX[i].url + '">' + (i + 1) + '.' + dataX[i].title + '.</a></p> \
+        outX += '<li><p class="subtitle"><a target="_blank" href="' + dataX[i].url + '">' + dataX[i].id + '.' + dataX[i].title + '.</a></p> \
                 <p class="subline">' + dataX[i].authors + '</li>';
     }
     output += outX;
@@ -32,11 +32,21 @@ function getSearchX(dataX, countX) {
         var outX = "";
         output = '<div><h1>Resultados ('+countX+')</h1><div><ul class="alist">';
         for (var i = 0; i < countX; i++) {
-            outX += '<li><p class="subtitle"><a href="' + dataX[i].url + '">' + (i + 1) + '.' + dataX[i].title + '.</a></p> \
+            outX += '<li><p class="subtitle"><a target="_blank" href="' + dataX[i].url + '">' + dataX[i].id + '.' + dataX[i].title + '.</a></p> \
                 <p class="subline">' + dataX[i].authors + '</li>';
         }
         output += outX;
         output += '</ul></div></div>';
         return output;
     }
+}
+/**
+ * [multiline description]
+ * @param  {[type]} f [description]
+ * @return {[type]}   [description]
+ */
+function multiline(f) {
+  return f.toString().
+      replace(/^[^\/]+\/\*!?/, '').
+      replace(/\*\/[^\/]+$/, '');
 }
