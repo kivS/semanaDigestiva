@@ -7,6 +7,19 @@ $('#menu li a').click(function(e) {
 	var pX = "";
 	var cX = 0;
 	switch(link){
+
+		case 'home':
+		pX = multiline(function(){/*!
+			<div>
+					<h1 class="hideMe">Chocolat Acid</h1>
+                <div>
+                	<img src="src/img/home.jpg" width="811" height="307" alt="comunicacoes" title="comunicacoes">
+                    <p class="legend">Consulta de todas as comunicações orais e posters apresentados na Semana Digestiva 2014.</p>
+                	
+			  </div></div> 
+		*/});
+		$('.content').html(pX);
+		break;
 		case 'd5':
 		pX = projectX({date:5,areaC:8}).get();
 		cX = projectX({date:5,areaC:8}).count();
@@ -159,6 +172,9 @@ $('#menu li a').click(function(e) {
                         <li><p class="subtitle"><a target="_blank" href="src/docs/892.pdf">CC14. ILEÍTE TERMINAL NÃO É SINÓNIMO DE DOENÇA DE CROHN.</a></p>
                         <p class="subline">Campos S., Oliveira A., Lérias C., Pina Cabral JE., Sofia C.</li> 
 
+                        <li><p class="subtitle"><a>CC15. RETIRADO A PEDIDO DO AUTOR.</a></p>
+                        </li> 
+
                         <li><p class="subtitle"><a target="_blank" href="src/docs/963.pdf"> CC16. DESCONEXÃO NEURO-INTESTINAL: PROCESSO IMUNOMEDIADO?</a></p>
                         <p class="subline">Silva Fernandes J., Ramos R. , Fernandes D., Duarte P. , Vicente C., Gomes M. , Casteleiro Alves C. , Cruto C</li> 
 
@@ -278,6 +294,9 @@ $('#menu li a').click(function(e) {
 
                         <li><p class="subtitle"><a target="_blank" href="src/docs/1003.pdf">CC53. TUBERCULOSE PERITONEAL EM DOENTE HIV.</a></p>
                         <p class="subline">Chapim I., Manuel G., Tavares V., Freitas A., Andrade N., Abreu A., Neto M., Barata F.</li>
+
+                        <li><p class="subtitle"><a >CC54. RETIRADO A PEDIDO DO AUTOR.</a></p>
+                        </li>
 
                         <li><p class="subtitle"><a target="_blank" href="src/docs/765.pdf">CC55. CARCINOMA GÁSTRICO TIPO HEPATÓIDE - UM CASO MUITO RARO E DESAFIANTE.</a></p>
                         <p class="subline">Martins D., Pinho J., Sousa P., Araújo R., Cancela E., Castanheira A., Ministro P., Silva A.</li>
@@ -635,7 +654,7 @@ $('#menu li a').click(function(e) {
                         <p class="subline">Campos S., Giestas S., Oliveira A., Cipriano MA., Souto P., Amaro P., Gregório C., Pina Cabral JE., Sofia C.</li>    
 
                         <li><p class="subtitle"><a target="_blank" href="src/docs/841.pdf">P3. EOSINOFILIA ESOFÁGICA EM DOENTES COM DISFAGIA OU IMPACTO ALIMENTAR: ESTUDO RETROSPECTIVO MULTICÊNTRICO DOS DADOS CLÍNICOS, ENDOSCÓPICOS E HISTOLÓGICOS DE 31 DOENTES.</a></p>
-                        <p class="subline">Carmo J., Marques S., Carvalho L., Rodrigues J., Bispo M., Oliveira P., Catarino A., Monteiro L., Serra D., Chagas C.</li>      
+                        <p class="subline">Carmo J., Marques S., Carvalho L.,Túlio M. M., Rodrigues J., Bispo M., Oliveira P., Catarino A., Monteiro L., Serra D., Chagas C.</li>      
 
                         <li><p class="subtitle"><a target="_blank" href="src/docs/773.pdf">P4. LESÕES CÁUSTICAS ESÓFAGO-GÁSTRICAS GRAVES: COMPLICAÇÕES E ABORDAGEM.</a></p>
                         <p class="subline">Carvalhana S., Trabulo D., Gonçalves A., Valente A., Palma R., Alexandrino P., Velosa J.</li>      
@@ -1144,9 +1163,6 @@ $('#menu li a').click(function(e) {
    
 // 		</Search Form>
 
-//<PDF LINKS NAVIGATION>
-
-//</PDF LINKS NAVIGATION>
 
 });//End of document ready
 

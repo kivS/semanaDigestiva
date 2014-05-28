@@ -2,7 +2,6 @@
 .clearfix:before, .clearfix:after { display: table; content: ''; }
 .clearfix:after { clear: both; }
 
-
 body {
 	background: #fff;
 	color: #79a8a8;
@@ -30,6 +29,12 @@ ul{ list-style:none;}
 /* Header */
 .header {
 	position: relative;
+	margin: 0 auto;
+	min-height: 560px;
+	width: 100%;
+}
+.header 2{
+	position: fixed;
 	margin: 0 auto;
 	min-height: 560px;
 	width: 100%;
@@ -66,8 +71,22 @@ h1 {
 	margin-left: 1em;
 	font-size: 1.1em;
 }
+
+h1.hideMe{ display:none;}
+
+.content div div img {
+	margin-left: 1em;
+}
+
+p.legend{ 
+	color: #666;
+	font-size: .9em;
+	margin: 0 0 0 1em;margin-left: 1em;
+}
+
 p.subline, subtitle {
 	color:#999;
+	line-height: 21px;
 }
 a{
 	text-decoration:none;
@@ -89,18 +108,25 @@ nav a {
 	font-size: 0.6em;
 	letter-spacing: 1px;
 	padding: 0.3em 0;
-	margin: 0 0.5em;
+	margin: 0 0.3em;
 	white-space: nowrap;
 }
 
 /* MENUS Style */
+#page-wrap{top:10em;}
+
 #menu{
 	height: .5em;
 }
 
 a.current-item{
 	color: #79a8a8;
-	background-color: #fff;
+	background-color:#FFF;
+}
+
+a.home{
+	color:#FFF;
+	background-color: rgba(204,204,204,.7);
 }
 	
 #menu ul{  
@@ -115,7 +141,7 @@ a.current-item{
 #menu li{
 	display: block;
 	float: left;
-	height: 40px;
+	/*height: 40px;*/
 	position: relative;
 	margin-bottom: 5px;
 }
@@ -124,14 +150,14 @@ a.current-item{
 	white-space: nowrap;
 	font-size: 0.6em; letter-spacing: 1px;
 	line-height: 40px;
-	height: 40px;
+	/*height: 40px;*/
 	display: block;
 	font-weight:bold;
 	padding: 0px 20px 0px 20px;
 }
 #menu ul li {
 	width:16em;
-	height:40px;
+	/*height:40px;*/
 	display: block;
 	visibility:visible;
 }

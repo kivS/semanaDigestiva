@@ -36,6 +36,23 @@ html, body, .container, .header, #pagewrap{
 	min-height: 100%;
 }
 
+.content2{clear:both;}
+
+.banner2{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background-image: url(../img/banner.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center 0px;
+}
+
 .banner{
 	background-image: url(../img/banner.png);
 	background-repeat: no-repeat;
