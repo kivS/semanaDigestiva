@@ -42,7 +42,7 @@ function getSearchX(dataX, countX) {
 }
 /**
  * [multiline description]
- * @param  {[type]} f [description]
+ * @param  {[type]} f [Multiline string]
  * @return {[type]}   [description]
  */
 function multiline(f) {
